@@ -1,0 +1,39 @@
+class Eda:
+    def __init__(self, vegetab, fruits, sweets, dishes):
+        self.vegetab = vegetab
+        self.fruits = fruits
+        self.sweets = sweets
+        self.dishes = dishes
+
+    def out(self):
+        return f"любит есть овощи: {self.vegetab}, любит есть фрукты: {self.fruits}, любит есть сладкое: {self.sweets}, любит блюда: {self.dishes}. "
+    
+class Chel:
+    def __init__(self, name, surn, age, favorFood):
+        self.name = name
+        self.surn = surn
+        self.age = age
+        self.food = favorFood
+
+    def out(self):
+        return f"Зовут {self.name} {self.surn}, {self.age} лет. Любимая еда: {self.food}"
+    
+chelov = []
+eda = []
+
+chelov.append(input("Имя: "))
+chelov.append(input("Фамилия: "))
+chelov.append(input("Возраст: "))
+eda.append(input("Любимые овощи: "))
+eda.append(input("Любимые фрукты: "))
+eda.append(input("Любимые сладости: "))
+eda.append(input("Любимые блюда: "))
+
+yourFood = Eda(eda[0], eda[1], eda[2], eda[3])
+yourPerson = Chel(chelov[0], chelov[1], chelov[2], yourFood.out())
+
+print(yourPerson.out())
+
+'''yourFood = Eda("огурцы и помидоры", "яблоки и апельсины", "шоколад и леденцы", "борщ и окрошка")
+yourPerson = Chel("Вася", "Пупкин", "20", yourFood.out())
+print(yourPerson.out())'''
